@@ -15,6 +15,9 @@ module.exports = {
         'light-gray': '#E6E6E6',
         white: '#FDFDFD',
       },
+      boxShadow: {
+        'custom-soft': '5px 5px 15px rgba(0, 0, 0, 0.15)',
+      },
     },
   },
   plugins: [
