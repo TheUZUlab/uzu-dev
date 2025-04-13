@@ -15,9 +15,6 @@ module.exports = {
         'light-gray': '#E6E6E6',
         white: '#FDFDFD',
       },
-      boxShadow: {
-        'custom-soft': '5px 5px 15px rgba(0, 0, 0, 0.15)',
-      },
     },
   },
   plugins: [
@@ -50,17 +47,17 @@ module.exports = {
 
       addUtilities({
         '.text-base': {
-          fontSize: '1rem',
+          fontSize: '16px',
           lineHeight: '1.5',
           fontWeight: '500',
         },
         '.text-lg': {
-          fontSize: '1.25rem',
+          fontSize: '20px',
           lineHeight: '1.75',
           fontWeight: '800',
         },
         '.text-xl': {
-          fontSize: '1.5rem',
+          fontSize: '24px',
           lineHeight: '2',
           fontWeight: '800',
         },
