@@ -45,6 +45,6 @@ module.exports = {
         },
       });
     }),
-    typography, // ✅ 이거 추가하세요!
+    typography,
   ],
 };
