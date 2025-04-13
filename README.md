@@ -1,2 +1,1 @@
-# ujoo-portfolio
-🚀 My personal portfolio website showcasing projects and skills.
+# uzu-dev
