@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>
+      <body className="font-sans text-base text-black bg-white">
         <Header />
         {children}
         <Footer />
