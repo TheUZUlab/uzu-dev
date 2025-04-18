@@ -15,7 +15,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="py-12 shadow-custom-soft text-center">
+    <header className="py-11 shadow-custom-soft text-center">
       <h1>
         <span className="sr-only">개발자 유주의 포트폴리오 사이트</span>
         <Image
@@ -27,7 +27,7 @@ export default function Header() {
         />
       </h1>
       <nav>
-        <ul className="flex justify-center gap-14 mt-14">
+        <ul className="flex justify-center gap-14 mt-8">
           {navItems.map(({ href, label }) => {
             const isActive = href === '/' ? pathname === '/' : pathname.startsWith(href);
 
