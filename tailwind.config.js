@@ -19,6 +19,10 @@ module.exports = {
       boxShadow: {
         'custom-soft': '5px 5px 15px rgba(0, 0, 0, 0.15)',
       },
+      backgroundImage: {
+        'gradient-custom':
+          'linear-gradient(to right, #D8D8D8 0%, #777777 25%, #5E5E5E 50%, #777777 75%, #D8D8D8 100%)',
+      },
     },
   },
   plugins: [
@@ -36,7 +40,7 @@ module.exports = {
           bottom: '0',
           width: '100%',
           height: '3px',
-          backgroundColor: '#405d72',
+          backgroundColor: '#000000',
           transform: 'scaleX(0)',
           transformOrigin: 'center',
           transition: 'transform 0.5s',

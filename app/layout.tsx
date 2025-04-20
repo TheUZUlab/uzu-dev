@@ -1,7 +1,12 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import Header from './component/Header/Header';
+import HeaderWrapper from './component/Header/HeaderWrapper';
 import Footer from './component/Footer/Footer';
+
+/**
+ * RootLayout
+ * - 모든 페이지의 공통 레이아웃 컴포넌트
+ */
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://uzu.dev'),
@@ -22,8 +27,13 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className="font-sans text-base text-black bg-white">
-        <Header />
+        {/* 상단 헤더 (카테고리 동적 데이터 포함) */}
+        <HeaderWrapper />
+
+        {/* 페이지 본문 */}
         {children}
+
+        {/* 하단 푸터 */}
         <Footer />
       </body>
     </html>
