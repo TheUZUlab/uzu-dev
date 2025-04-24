@@ -30,24 +30,24 @@ export default function Header({ blogCategories, projectCategories }: HeaderProp
   return (
     <header className="py-11 shadow-custom-soft text-center relative z-50">
       {/* 로고 + 스크린리더용 텍스트 */}
-      <h1>
-        <Link href="/">
-          <span className="sr-only">개발자 유주의 포트폴리오 사이트</span>
+      <h1 className="w-28 h-20 md:w-32 md:h-20 mx-auto">
+        <span className="sr-only">개발자 유주의 포트폴리오 사이트</span>
+        <Link href="/" className="w-full h-full">
           <Image
             src="/images/icon-logo.svg"
             alt="uzu-dev logo"
             width={130}
             height={88}
-            className="mx-auto"
+            className="w-full h-full"
           />
         </Link>
       </h1>
 
       {/* 내비게이션 메뉴 */}
       <nav aria-label="메인 내비게이션">
-        <ul className="flex justify-center items-center gap-14 mt-8 relative">
+        <ul className="flex justify-center items-center gap-6 lg:gap-14 mt-5 lg:mt-8 relative">
           {navItems.map(({ href, label, categories }) => {
-            const isActive = pathname === href;
+            const isActive = href === '/' ? pathname === '/' : pathname.startsWith(href);
 
             return (
               <li key={href} className="group relative">
@@ -58,7 +58,7 @@ export default function Header({ blogCategories, projectCategories }: HeaderProp
                   <Link
                     href={href}
                     aria-current={isActive ? 'page' : undefined}
-                    className={`text-xl hover-line ${isActive ? 'text-black' : 'text-dark-gray'}`}
+                    className={`px-2 py-1 text-base font-extrabold lg:text-2xl hover-line ${isActive ? 'text-black' : 'text-dark-gray'}`}
                   >
                     {label}
                   </Link>

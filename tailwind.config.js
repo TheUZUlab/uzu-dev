@@ -53,23 +53,7 @@ module.exports = {
         },
       });
 
-      addUtilities({
-        '.text-base': {
-          fontSize: '16px',
-          lineHeight: '1.5',
-          fontWeight: '500',
-        },
-        '.text-lg': {
-          fontSize: '20px',
-          lineHeight: '1.75',
-          fontWeight: '800',
-        },
-        '.text-xl': {
-          fontSize: '24px',
-          lineHeight: '2',
-          fontWeight: '800',
-        },
-      });
+      addUtilities({});
     }),
     typography,
   ],

@@ -25,7 +25,7 @@ export default function DropDownMenu({ label, baseHref, categories }: DropDownMe
       <Link
         href={baseHref}
         aria-current={isActive ? 'page' : undefined}
-        className={`inline-block px-2 py-1 font-semibold text-xl hover-line ${
+        className={`inline-block px-2 py-1 text-base font-extrabold lg:text-2xl hover-line ${
           isActive ? 'text-black' : 'text-dark-gray'
         }`}
       >
@@ -36,14 +36,14 @@ export default function DropDownMenu({ label, baseHref, categories }: DropDownMe
       <ul
         className="absolute left-1/2 -translate-x-1/2 mt-3 opacity-0 scale-95 
         group-hover:opacity-100 group-hover:scale-100 group-hover:visible
-        bg-white shadow-gradient-custom rounded-md w-40 z-10 text-sm text-left 
+        bg-white shadow-gradient-custom rounded-md w-24 lg:w-40 z-10 text-xs lg:text-sm text-left 
         transition-all duration-300 origin-top overflow-hidden"
       >
         {/* 전체 보기 */}
         <li className="w-full">
           <Link
             href={baseHref}
-            className="block w-full px-4 py-2 text-dark-gray hover:bg-light-gray hover:text-black capitalize transition-colors duration-300"
+            className="block w-full px-2 py-2 lg:px-4 text-dark-gray hover:bg-light-gray hover:text-black capitalize transition-colors duration-300"
           >
             전체 보기
           </Link>
@@ -57,7 +57,7 @@ export default function DropDownMenu({ label, baseHref, categories }: DropDownMe
           >
             <Link
               href={`${baseHref}/${cat}`}
-              className="block w-full px-4 py-2 text-dark-gray hover:bg-light-gray hover:text-black capitalize transition-colors duration-300"
+              className="block w-full px-2 py-1 lg:px-4 text-dark-gray hover:bg-light-gray hover:text-black capitalize transition-colors duration-300"
             >
               {cat}
             </Link>

@@ -8,6 +8,7 @@ import ArticleCard from '../ArticleCard/ArticleCard';
 interface BlogTagFilterProps {
   posts: PostMeta[];
   category: string;
+  type: 'blog' | 'project';
 }
 
 /**
@@ -16,7 +17,7 @@ interface BlogTagFilterProps {
  * - URL 쿼리에서 ?tag=값을 읽고 자동 필터링
  * - 클릭 시 setSelectedTag()로 상태 변경
  */
-export default function PageWithTags({ posts, category }: BlogTagFilterProps) {
+export default function PageWithTags({ posts, category, type }: BlogTagFilterProps) {
   const searchParams = useSearchParams();
   const tagFromURL = searchParams.get('tag');
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
@@ -35,15 +36,15 @@ export default function PageWithTags({ posts, category }: BlogTagFilterProps) {
   const filtered = selectedTag ? posts.filter(post => post.tags?.includes(selectedTag)) : posts;
 
   return (
-    <section className="relative">
+    <section>
       {/* 태그 필터 UI */}
-      <aside className="absolute right-0 top-0 w-48 bg-white rounded-xl shadow-custom-soft p-5">
-        <h4 className="text-lg mb-8">contents</h4>
-        <ul className="space-y-2">
+      <aside className="hidden lg:block sticky top-10 float-right w-32 lg:w-48 bg-white rounded-xl shadow-custom-soft p-5">
+        <h4 className="text-base font-semibold lg:text-lg mb-4 lg:mb-8">contents</h4>
+        <ul className="space-y-1 lg:space-y-2" id="post-list">
           <li>
             <button
               onClick={() => setSelectedTag(null)}
-              className={`block text-left text-base hover-line ${
+              className={`block text-left text-sm font-semibold lg:text-base hover-line ${
                 selectedTag === null ? 'text-black' : 'text-dark-gray'
               }`}
             >
@@ -53,8 +54,11 @@ export default function PageWithTags({ posts, category }: BlogTagFilterProps) {
           {allTags.map(tag => (
             <li key={tag}>
               <button
-                onClick={() => setSelectedTag(tag)}
-                className={`block text-left text-base hover-line ${
+                onClick={() => {
+                  setSelectedTag(tag);
+                  document.getElementById('post-list')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className={`block text-left text-sm font-semibold lg:text-base hover-line ${
                   selectedTag === tag ? 'text-black' : 'text-dark-gray'
                 }`}
               >
@@ -66,10 +70,10 @@ export default function PageWithTags({ posts, category }: BlogTagFilterProps) {
       </aside>
 
       {/* 포스트 리스트 */}
-      <ul className="space-y-11 pr-60">
+      <ul className="space-y-3 lg:space-y-11 pr-30 lg:pr-60">
         {filtered.map(post => (
           <li key={post.slug}>
-            <ArticleCard post={post} category={category} onTagClick={setSelectedTag} />
+            <ArticleCard post={post} category={category} type={type} onTagClick={setSelectedTag} />
           </li>
         ))}
       </ul>

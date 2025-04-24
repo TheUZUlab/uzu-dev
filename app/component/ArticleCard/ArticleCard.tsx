@@ -13,20 +13,28 @@ import Link from 'next/link';
 interface ArticleCardProps {
   post: PostMeta; // 마크다운 파일에서 파싱한 포스트 데이터
   category: string; // 현재 카테고리 (URL 경로 생성을 위해 필요)
+  type: 'blog' | 'project'; // basePath 구분용
   onTagClick?: (tag: string) => void; // 태그 클릭 시 호출할 콜백 함수 (선택적)
 }
 
-export default function ArticleCard({ post, category, onTagClick }: ArticleCardProps) {
+export default function ArticleCard({ post, category, type, onTagClick }: ArticleCardProps) {
+  const basePath = type === 'project' ? '/project' : '/blog';
+
   return (
-    <Link href={`/blog/${category}/${post.slug}`} className="mx-24 flex items-center gap-11">
+    <Link
+      href={`${basePath}/${category}/${post.slug}`}
+      aria-label={`포스트 보기: ${post.title}`}
+      className="px-5 lg:px-24 flex items-center gap-8 lg:gap-11"
+    >
       {/* 썸네일 이미지 */}
-      <Image
-        src={post.thumbnail}
-        alt={`${post.title} 썸네일`}
-        width={240}
-        height={160}
-        className="rounded-md object-cover aspect-[3/2]"
-      />
+      <div className="relative rounded-lg w-[32%] min-w-[144px] max-w-[340px] aspect-[3/2]">
+        <Image
+          src={post.thumbnail}
+          alt={`${post.title} 썸네일`}
+          fill
+          className="object-cover rounded-lg"
+        />
+      </div>
 
       <div>
         {/* 태그 버튼 목록 */}
@@ -35,11 +43,12 @@ export default function ArticleCard({ post, category, onTagClick }: ArticleCardP
             {post.tags.map(tag => (
               <button
                 key={tag}
+                type="button"
                 onClick={e => {
                   e.preventDefault(); // 링크 이동 방지
                   onTagClick?.(tag); // 선택된 태그를 상위로 전달
                 }}
-                className="text-sm text-white px-3 py-1.5 bg-light-gray rounded-lg hover:bg-dark-gray duration-300"
+                className="text-xs lg:text-sm text-white px-2 py-1.5 lg:px-3 bg-light-gray rounded-lg hover:bg-dark-gray duration-300"
               >
                 {tag}
               </button>
@@ -48,9 +57,15 @@ export default function ArticleCard({ post, category, onTagClick }: ArticleCardP
         )}
 
         {/* 제목 / 설명 / 날짜 */}
-        <h3 className="text-lg font-semibold">{post.title}</h3>
-        <p className="text-base text-dark-gray mb-2">{post.description}</p>
-        <p className="text-base text-dark-gray">{post.date}</p>
+        <h3 className="text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl font-semibold 2xl:font-extrabold  line-clamp-1">
+          {post.title}
+        </h3>
+        <p className="text-[11px] sm:text-sm md:text-base lg:text-[17px] 2xl:text-lg text-dark-gray  mb-1.5 md:mb-2 line-clamp-1">
+          {post.description}
+        </p>
+        <p className="text-[10px] sm:text-xs md:text-sm lg:text-base 2xl:text-lg text-dark-gray truncate">
+          {post.date}
+        </p>
       </div>
     </Link>
   );

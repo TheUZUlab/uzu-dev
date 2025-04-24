@@ -35,11 +35,11 @@ export default async function ProjectCategoryPage({ params }: { params: Promise<
   const readableCategory = decodeURIComponent(category).replace(/-/g, ' ');
 
   return (
-    <main className="mx-64 mb-24">
+    <main className="px-5 mx-auto min-w-[300px] max-w-[1600px] mb-24">
       {/* 카테고리 제목 영역 */}
-      <div className="relative my-24 w-full h-1 bg-gradient-custom">
+      <div className="relative my-14 lg:my-24 w-full h-1 bg-gradient-custom">
         <h2
-          className="absolute left-24 top-1/2 -translate-y-1/2 bg-white px-4 text-xl text-black capitalize"
+          className="absolute left-5 lg:left-24 top-1/2 -translate-y-1/2 bg-white px-4 text-base lg:text-2xl font-extrabold text-black capitalize"
           aria-label={`Category: ${readableCategory}`}
         >
           {readableCategory}
@@ -49,24 +49,35 @@ export default async function ProjectCategoryPage({ params }: { params: Promise<
       {/* 포스트가 없을 경우 */}
       {filteredPosts.length === 0 ? (
         <article className="mb-24 flex flex-col items-center justify-center gap-8">
+          {/* 일러스트 이미지 */}
           <Image
             src="/images/devMode.svg"
             alt="작성된 포스트가 없습니다."
-            width={254}
-            height={213}
+            width={160}
+            height={140}
+            className="w-40 h-36 md:w-48 md:h-40 2xl:w-64 2xl:h-52"
           />
-          <p className="text-xl text-dark-gray">작성된 포스트가 없습니다.</p>
+
+          {/* 안내 메시지 */}
+          <p className="text-dark-gray text-base md:text-lg 2xl:text-2xl font-extrabold duration-300 text-center">
+            작성된 포스트가 없습니다.
+          </p>
+
+          {/* 홈으로 이동하는 버튼 */}
           <Link
             href="/"
-            className="text-lg text-white bg-light-gray hover:bg-dark-gray rounded-xl px-14 py-3 duration-300"
+            className="text-white text-sm md:text-md 2xl:text-xl font-extrabold
+        bg-light-gray hover:bg-dark-gray rounded-md md:rounded-lg 2xl:rounded-xl
+        px-6 py-2 md:px-10 md:py-2.5 2xl:px-14 2xl:py-3
+        duration-300 text-center"
           >
             홈으로 돌아가기
           </Link>
         </article>
       ) : (
         // 포스트가 있을 경우 → 필터링 UI 포함 리스트 렌더링
-        <Suspense fallback={<p>로딩 중...</p>}>
-          <PageWithTags category={category} posts={filteredPosts} />
+        <Suspense>
+          <PageWithTags category={category} posts={filteredPosts} type="project" />
         </Suspense>
       )}
     </main>
