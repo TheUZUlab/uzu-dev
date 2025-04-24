@@ -38,13 +38,13 @@ export default function PageWithTags({ posts, category, type }: BlogTagFilterPro
   return (
     <section>
       {/* 태그 필터 UI */}
-      <aside className="hidden lg:block sticky top-10 float-right w-32 lg:w-48 bg-white rounded-xl shadow-custom-soft p-5">
-        <h4 className="text-base font-semibold lg:text-lg mb-4 lg:mb-8">contents</h4>
-        <ul className="space-y-1 lg:space-y-2" id="post-list">
+      <aside className="hidden lg:block sticky top-10 float-right w-48 bg-white rounded-xl shadow-custom-soft p-5">
+        <h4 className=" font-semibold text-lg mb-8">contents</h4>
+        <ul className="space-y-2" id="post-list">
           <li>
             <button
               onClick={() => setSelectedTag(null)}
-              className={`block text-left text-sm font-semibold lg:text-base hover-line ${
+              className={`block text-left font-semibold text-base hover-line ${
                 selectedTag === null ? 'text-black' : 'text-dark-gray'
               }`}
             >
@@ -58,7 +58,7 @@ export default function PageWithTags({ posts, category, type }: BlogTagFilterPro
                   setSelectedTag(tag);
                   document.getElementById('post-list')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className={`block text-left text-sm font-semibold lg:text-base hover-line ${
+                className={`block text-left font-semibold text-base hover-line ${
                   selectedTag === tag ? 'text-black' : 'text-dark-gray'
                 }`}
               >

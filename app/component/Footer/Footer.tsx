@@ -9,15 +9,15 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer
-      className="bg-light-gray px-5 sm:px-10 md:px-20 lg:px-32 xl:px-40 2xl:px-40 py-10 sm:py-12 flex flex-col lg:flex-row items-center lg:items-start gap-5 lg:gap-40 text-dark-gray text-xs lg:text-base"
+      className="bg-light-gray px-5 sm:px-10 md:px-20 lg:px-32 xl:px-40 2xl:px-40 py-6 sm:py-12 flex flex-col lg:flex-row items-center lg:items-start gap-5 lg:gap-40 text-dark-gray text-xs lg:text-base"
       aria-label="사이트 푸터"
     >
       {/* 사이트 로고 */}
       <Image
         src="/images/icon-logo.svg"
         alt="uzu-dev logo"
-        width={108}
-        height={69}
+        width={88}
+        height={49}
         className="opacity-25 lg:w-40 lg:h-24"
       />
 

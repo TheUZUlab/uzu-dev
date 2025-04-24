@@ -28,24 +28,24 @@ export default function Header({ blogCategories, projectCategories }: HeaderProp
   ];
 
   return (
-    <header className="py-11 shadow-custom-soft text-center relative z-50">
+    <header className="py-5 lg:py-10 shadow-custom-soft text-center relative z-50">
       {/* 로고 + 스크린리더용 텍스트 */}
-      <h1 className="w-28 h-20 md:w-32 md:h-20 mx-auto">
+      <h1 className="w-28 h-20 md:w-36 md:h-24 mx-auto">
         <span className="sr-only">개발자 유주의 포트폴리오 사이트</span>
         <Link href="/" className="w-full h-full">
           <Image
             src="/images/icon-logo.svg"
             alt="uzu-dev logo"
-            width={130}
-            height={88}
-            className="w-full h-full"
+            width={96}
+            height={64}
+            className="mx-auto w-24 h-16 lg:w-36 lg:h-24"
           />
         </Link>
       </h1>
 
       {/* 내비게이션 메뉴 */}
       <nav aria-label="메인 내비게이션">
-        <ul className="flex justify-center items-center gap-6 lg:gap-14 mt-5 lg:mt-8 relative">
+        <ul className="flex justify-center items-center gap-6 lg:gap-14 mt-0 lg:mt-10 relative">
           {navItems.map(({ href, label, categories }) => {
             const isActive = href === '/' ? pathname === '/' : pathname.startsWith(href);
 

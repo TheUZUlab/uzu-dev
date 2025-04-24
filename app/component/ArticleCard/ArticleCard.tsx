@@ -19,6 +19,7 @@ interface ArticleCardProps {
 
 export default function ArticleCard({ post, category, type, onTagClick }: ArticleCardProps) {
   const basePath = type === 'project' ? '/project' : '/blog';
+  const tags = post.tags ?? [];
 
   return (
     <Link
@@ -27,7 +28,7 @@ export default function ArticleCard({ post, category, type, onTagClick }: Articl
       className="px-5 lg:px-24 flex items-center gap-8 lg:gap-11"
     >
       {/* 썸네일 이미지 */}
-      <div className="relative rounded-lg w-[32%] min-w-[144px] max-w-[340px] aspect-[3/2]">
+      <div className="relative rounded-lg w-[32%] min-w-[144px] max-w-[250px] lg:min-w-[250px]  lg:max-w-[500px] aspect-[3/2]">
         <Image
           src={post.thumbnail}
           alt={`${post.title} 썸네일`}
@@ -36,23 +37,25 @@ export default function ArticleCard({ post, category, type, onTagClick }: Articl
         />
       </div>
 
-      <div>
-        {/* 태그 버튼 목록 */}
-        {post.tags && (
-          <div className="flex gap-2 flex-wrap mb-3">
-            {post.tags.map(tag => (
-              <button
-                key={tag}
-                type="button"
-                onClick={e => {
-                  e.preventDefault(); // 링크 이동 방지
-                  onTagClick?.(tag); // 선택된 태그를 상위로 전달
-                }}
-                className="text-xs lg:text-sm text-white px-2 py-1.5 lg:px-3 bg-light-gray rounded-lg hover:bg-dark-gray duration-300"
-              >
-                {tag}
-              </button>
-            ))}
+      <div className="w-full">
+        {/* 태그 버튼 목록 - 한 줄만 출력 */}
+        {tags.length > 0 && (
+          <div className="relative h-[32px] sm:h-[40px] md:h-[48px] overflow-hidden">
+            <div className="flex flex-wrap gap-2 absolute top-0 left-0 w-full">
+              {tags.map(tag => (
+                <button
+                  key={tag}
+                  type="button"
+                  onClick={e => {
+                    e.preventDefault();
+                    onTagClick?.(tag);
+                  }}
+                  className="text-xs font-bold lg:text-sm text-white px-2 py-1.5 lg:px-3 bg-light-gray rounded-lg hover:bg-dark-gray duration-300"
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
           </div>
         )}
 

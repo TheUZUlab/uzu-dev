@@ -10,26 +10,26 @@ export default async function Home() {
     <>
       {/* hero 영역 */}
       <section
-        className="py-16 lg:py-24 flex flex-col justify-center items-center text-white"
+        className="py-10 lg:py-24 flex flex-col justify-center items-center text-white"
         style={{
           background: 'linear-gradient(to right, #939393, #c3c3c3)',
         }}
       >
-        <p className="lg:text-4xl text-2xl font-bold lg:mb-3 mb-1">
+        <p className="lg:text-4xl text-xl font-bold lg:mb-3 mb-0">
           Hi, I&apos;m <span className="text-white">Jang Yuju</span>
         </p>
-        <p className="text-sm lg:text-md text-light-gray lg:mb-6 mb-4">
+        <p className="text-xs lg:text-md text-light-gray lg:mb-6 mb-3">
           AI Enthusiast · Web Developer · Future Game Creator
         </p>
 
         <Link
           href="/projects"
-          className="bg-white text-dark-gray font-semibold px-4 py-2 lg:px-6 lg:py-2.5 rounded-full hover:bg-soft-gray transition shadow-md"
+          className="bg-white text-dark-gray text-xs lg:text-base font-semibold px-3 py-1.5 lg:px-6 lg:py-2.5 rounded-full hover:bg-soft-gray transition shadow-md"
         >
           Explore My Work
         </Link>
 
-        <p className="mt-2 lg:mt-3 text-xs lg:text-sm text-light-gray">
+        <p className="mt-1.5 lg:mt-3 text-xs lg:text-sm text-light-gray">
           Cheju Halla University · Born in 2004
         </p>
       </section>

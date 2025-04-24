@@ -47,7 +47,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
   });
 
   return (
-    <main className="px-5 mx-auto my-24 max-w-[1000px]">
+    <main className="px-5 mx-auto my-12 lg:my-24 max-w-[1000px]">
       {/* 태그 버튼 리스트 (클릭 시 해당 카테고리 페이지로 이동 + 쿼리로 필터링) */}
       {Array.isArray(tags) && tags.length > 0 && (
         <div className="flex gap-2 flex-wrap">
@@ -64,8 +64,8 @@ export default async function BlogPostPage({ params }: { params: Params }) {
       )}
 
       {/* 제목 및 날짜 */}
-      <h2 className="text-4xl font-extrabold text-black mt-6 mb-1">{title}</h2>
-      <p className="text-base text-dark-gray mb-6">{formattedDate}</p>
+      <h2 className="text-2xl lg:text-4xl font-extrabold text-black mt-6 mb-1">{title}</h2>
+      <p className="text-sm lg:text-base text-dark-gray mb-6">{formattedDate}</p>
 
       {/* 썸네일 이미지 */}
       {thumbnail && (
@@ -82,7 +82,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 
       {/* 본문 HTML (remark-html로 변환된 마크다운 내용) */}
       <div
-        className="prose prose-sm lg:prose-xl max-w-none dark:prose-invert mb-12"
+        className="prose prose-sm lg:prose-xl max-w-none mb-12"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
     </main>
