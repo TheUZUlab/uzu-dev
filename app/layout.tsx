@@ -9,7 +9,7 @@ import Footer from './component/Footer/Footer';
  */
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://uzu.dev'),
+  metadataBase: new URL('http://www.uzu-dev.kr'),
   title: 'uzu-dev',
   description: '개발자 유주의 프로젝트 및 공부 기록',
   openGraph: {
