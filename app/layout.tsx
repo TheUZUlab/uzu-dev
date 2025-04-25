@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" suppressHydrationWarning>
-      <body className="font-sans text-black bg-white">
+      <body className="font-sans text-base text-black bg-white">
         {/* 상단 헤더 (카테고리 동적 데이터 포함) */}
         <HeaderWrapper />
 

@@ -51,7 +51,7 @@ export default function HomeArticleCard({ post, category, onTagClick }: HomeArti
                     onClick={e => {
                       e.preventDefault();
                       onTagClick?.(tag); // 선택된 태그 상태 업데이트
-                      router.push(`${basePath}?tag=${encodeURIComponent(tag)}`); // ✅ 라우팅 처리
+                      router.push(`${basePath}?tag=${encodeURIComponent(tag)}`);
                     }}
                     className="text-[10px] font-bold sm:text-xs md:text-sm lg:text-sm 2xl:text-base text-white
                     px-2 sm:px-2.5 md:px-3 py-1.5 bg-light-gray rounded-lg hover:bg-dark-gray duration-300"

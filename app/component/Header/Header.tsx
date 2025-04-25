@@ -24,7 +24,7 @@ export default function Header({ blogCategories, projectCategories }: HeaderProp
     { href: '/', label: 'Home' },
     { href: '/project', label: 'Project', categories: projectCategories },
     { href: '/blog', label: 'Blog', categories: blogCategories },
-    { href: '/about', label: 'About' },
+    { href: '/profile', label: 'Profile' },
   ];
 
   return (
