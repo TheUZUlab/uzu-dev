@@ -35,11 +35,11 @@ export default async function BlogCategoryPage({ params }: { params: Params }) {
   const readableCategory = decodeURIComponent(category).replace(/-/g, ' ');
 
   return (
-    <main className="px-5 mx-auto min-w-[300px] max-w-[1600px] mb-24">
+    <main className="mx-auto mb-24 min-w-[300px] max-w-[1600px] px-5">
       {/* 카테고리 제목 영역 */}
-      <div className="relative my-14 lg:my-24 w-full h-1 bg-gradient-custom">
+      <div className="relative my-14 h-1 w-full bg-gradient-custom lg:my-24">
         <h2
-          className="absolute left-5 lg:left-24 top-1/2 -translate-y-1/2 bg-white px-4 text-base lg:text-2xl font-extrabold text-black capitalize"
+          className="absolute left-5 top-1/2 -translate-y-1/2 bg-white px-4 text-base font-extrabold capitalize text-black lg:left-24 lg:text-2xl"
           aria-label={`Category: ${readableCategory}`}
         >
           {readableCategory}
@@ -55,21 +55,18 @@ export default async function BlogCategoryPage({ params }: { params: Params }) {
             alt="작성된 포스트가 없습니다."
             width={160}
             height={140}
-            className="w-40 h-36 md:w-48 md:h-40 2xl:w-64 2xl:h-52"
+            className="h-36 w-40 md:h-40 md:w-48 2xl:h-52 2xl:w-64"
           />
 
           {/* 안내 메시지 */}
-          <p className="text-dark-gray text-base md:text-lg 2xl:text-2xl font-extrabold duration-300 text-center">
+          <p className="text-center text-base font-extrabold text-dark-gray duration-300 md:text-lg 2xl:text-2xl">
             작성된 포스트가 없습니다.
           </p>
 
           {/* 홈으로 이동하는 버튼 */}
           <Link
             href="/"
-            className="text-white text-sm md:text-md 2xl:text-xl font-extrabold
-        bg-light-gray hover:bg-dark-gray rounded-md md:rounded-lg 2xl:rounded-xl
-        px-6 py-2 md:px-10 md:py-2.5 2xl:px-14 2xl:py-3
-        duration-300 text-center"
+            className="md:text-md rounded-md bg-light-gray px-6 py-2 text-center text-sm font-extrabold text-white duration-300 hover:bg-dark-gray md:rounded-lg md:px-10 md:py-2.5 2xl:rounded-xl 2xl:px-14 2xl:py-3 2xl:text-xl"
           >
             홈으로 돌아가기
           </Link>

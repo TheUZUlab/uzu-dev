@@ -20,12 +20,12 @@ export default function DropDownMenu({ label, baseHref, categories }: DropDownMe
   const isActive = pathname === baseHref || pathname.startsWith(`${baseHref}/`);
 
   return (
-    <div className="relative group inline-block text-left">
+    <div className="group relative inline-block text-left">
       {/* 기본 라벨 (메인 링크) */}
       <Link
         href={baseHref}
         aria-current={isActive ? 'page' : undefined}
-        className={`inline-block px-2 py-1 text-base font-extrabold lg:text-2xl hover-line ${
+        className={`inline-block px-2 py-1 text-base font-extrabold hover-line lg:text-2xl ${
           isActive ? 'text-black' : 'text-dark-gray'
         }`}
       >
@@ -33,17 +33,12 @@ export default function DropDownMenu({ label, baseHref, categories }: DropDownMe
       </Link>
 
       {/* 드롭다운 리스트 */}
-      <ul
-        className="absolute left-1/2 -translate-x-1/2 mt-3 opacity-0 scale-95 
-        group-hover:opacity-100 group-hover:scale-100 group-hover:visible
-        bg-white shadow-gradient-custom rounded-md w-24 lg:w-40 z-10 text-xs lg:text-sm text-left 
-        transition-all duration-300 origin-top overflow-hidden"
-      >
+      <ul className="shadow-gradient-custom absolute left-1/2 z-10 mt-3 w-24 origin-top -translate-x-1/2 scale-95 overflow-hidden rounded-md bg-white text-left text-xs opacity-0 transition-all duration-300 group-hover:visible group-hover:scale-100 group-hover:opacity-100 lg:w-40 lg:text-sm">
         {/* 전체 보기 */}
         <li className="w-full">
           <Link
             href={baseHref}
-            className="block w-full px-2 py-2 lg:px-4 text-dark-gray hover:bg-light-gray hover:text-black capitalize transition-colors duration-300"
+            className="block w-full px-2 py-2 capitalize text-dark-gray transition-colors duration-300 hover:bg-light-gray hover:text-black lg:px-4"
           >
             전체 보기
           </Link>
@@ -57,7 +52,7 @@ export default function DropDownMenu({ label, baseHref, categories }: DropDownMe
           >
             <Link
               href={`${baseHref}/${cat}`}
-              className="block w-full px-2 py-1 lg:px-4 text-dark-gray hover:bg-light-gray hover:text-black capitalize transition-colors duration-300"
+              className="block w-full px-2 py-1 capitalize text-dark-gray transition-colors duration-300 hover:bg-light-gray hover:text-black lg:px-4"
             >
               {cat}
             </Link>

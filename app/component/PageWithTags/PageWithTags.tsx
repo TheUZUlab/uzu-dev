@@ -38,13 +38,13 @@ export default function PageWithTags({ posts, category, type }: BlogTagFilterPro
   return (
     <section>
       {/* 태그 필터 UI */}
-      <aside className="hidden lg:block sticky top-10 float-right w-48 bg-white rounded-xl shadow-custom-soft p-5">
-        <h4 className=" font-semibold text-lg mb-8">contents</h4>
+      <aside className="sticky top-10 float-right hidden w-48 rounded-xl bg-white p-5 shadow-custom-soft lg:block">
+        <h4 className="mb-8 text-lg font-semibold">contents</h4>
         <ul className="space-y-2" id="post-list">
           <li>
             <button
               onClick={() => setSelectedTag(null)}
-              className={`block text-left font-semibold text-base hover-line ${
+              className={`block text-left text-base font-semibold hover-line ${
                 selectedTag === null ? 'text-black' : 'text-dark-gray'
               }`}
             >
@@ -58,7 +58,7 @@ export default function PageWithTags({ posts, category, type }: BlogTagFilterPro
                   setSelectedTag(tag);
                   document.getElementById('post-list')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className={`block text-left font-semibold text-base hover-line ${
+                className={`block text-left text-base font-semibold hover-line ${
                   selectedTag === tag ? 'text-black' : 'text-dark-gray'
                 }`}
               >
@@ -70,7 +70,7 @@ export default function PageWithTags({ posts, category, type }: BlogTagFilterPro
       </aside>
 
       {/* 포스트 리스트 */}
-      <ul className="space-y-3 lg:space-y-11 pr-30 xl:pr-60">
+      <ul className="pr-30 space-y-3 lg:space-y-11 xl:pr-60">
         {filtered.map(post => (
           <li key={post.slug}>
             <ArticleCard post={post} category={category} type={type} onTagClick={setSelectedTag} />

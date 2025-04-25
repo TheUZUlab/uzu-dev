@@ -47,15 +47,15 @@ export default async function ProjectPostPage({ params }: { params: Params }) {
   });
 
   return (
-    <main className="px-5 mx-auto my-12 lg:my-24 max-w-[1000px]">
+    <main className="mx-auto my-12 max-w-[1000px] px-5 lg:my-24">
       {/* 태그 버튼 리스트 (클릭 시 해당 카테고리 페이지로 이동 + 쿼리로 필터링) */}
       {Array.isArray(tags) && tags.length > 0 && (
-        <div className="flex gap-2 flex-wrap">
+        <div className="flex flex-wrap gap-2">
           {tags.map(tag => (
             <Link
               key={tag}
               href={`/project?tag=${encodeURIComponent(tag)}`}
-              className="text-xs lg:text-sm text-white px-3 py-1.5 bg-light-gray rounded-lg hover:bg-dark-gray duration-300"
+              className="rounded-lg bg-light-gray px-3 py-1.5 text-xs text-white duration-300 hover:bg-dark-gray lg:text-sm"
             >
               {tag}
             </Link>
@@ -64,12 +64,12 @@ export default async function ProjectPostPage({ params }: { params: Params }) {
       )}
 
       {/* 제목 및 날짜 */}
-      <h2 className="text-2xl lg:text-4xl font-extrabold text-black mt-6 mb-1">{title}</h2>
-      <p className="text-sm lg:text-base text-dark-gray mb-6">{formattedDate}</p>
+      <h2 className="mb-1 mt-6 text-2xl font-extrabold text-black lg:text-4xl">{title}</h2>
+      <p className="mb-6 text-sm text-dark-gray lg:text-base">{formattedDate}</p>
 
       {/* 썸네일 이미지 */}
       {thumbnail && (
-        <div className="relative w-full aspect-[3/2] mb-20 rounded-md overflow-hidden">
+        <div className="relative mb-20 aspect-[3/2] w-full overflow-hidden rounded-md">
           <Image
             src={thumbnail}
             alt={`${title} 썸네일`}
@@ -82,7 +82,7 @@ export default async function ProjectPostPage({ params }: { params: Params }) {
 
       {/* 본문 HTML (remark-html로 변환된 마크다운 내용) */}
       <div
-        className="prose prose-sm lg:prose-xl max-w-none mb-12"
+        className="prose prose-sm mb-12 max-w-none lg:prose-xl"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
     </main>

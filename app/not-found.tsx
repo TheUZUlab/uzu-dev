@@ -10,28 +10,25 @@ import Image from 'next/image';
 
 export default function NotFound() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center gap-4 md:gap-6 2xl:gap-8 duration-300 px-4">
+    <main className="flex min-h-screen flex-col items-center justify-center gap-4 px-4 duration-300 md:gap-6 2xl:gap-8">
       {/* 일러스트 이미지 */}
       <Image
         src="/images/devMode.svg"
-        alt="개발 페이지 이미지"
+        alt="404 페이지 이미지"
         width={160}
         height={140}
-        className="w-40 h-36 md:w-48 md:h-40 2xl:w-64 2xl:h-52 object-contain"
+        className="h-36 w-40 object-contain md:h-40 md:w-48 2xl:h-52 2xl:w-64"
       />
 
       {/* 안내 메시지 */}
-      <p className="text-dark-gray text-base md:text-lg 2xl:text-2xl font-extrabold duration-300 text-center">
-        개발 중인 페이지입니다.
+      <p className="text-center text-base font-extrabold text-dark-gray duration-300 md:text-lg 2xl:text-2xl">
+        해당 페이지를 찾을 수 없습니다.
       </p>
 
       {/* 홈으로 이동하는 버튼 */}
       <Link
         href="/"
-        className="text-white text-sm md:text-md 2xl:text-xl font-extrabold
-        bg-light-gray hover:bg-dark-gray rounded-md md:rounded-lg 2xl:rounded-xl
-        px-6 py-2 md:px-10 md:py-2.5 2xl:px-14 2xl:py-3
-        duration-300 text-center"
+        className="md:text-md rounded-md bg-light-gray px-6 py-2 text-center text-sm font-extrabold text-white duration-300 hover:bg-dark-gray md:rounded-lg md:px-10 md:py-2.5 2xl:rounded-xl 2xl:px-14 2xl:py-3 2xl:text-xl"
       >
         홈으로 돌아가기
       </Link>

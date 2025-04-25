@@ -27,23 +27,23 @@ export default function HomeArticleCard({ post, category, onTagClick }: HomeArti
       <Link
         href={`${basePath}/${category}/${post.slug}`}
         aria-label={`포스트 보기: ${post.title}`}
-        className="flex flex-col w-full"
+        className="flex w-full flex-col"
       >
         {/* 썸네일 */}
-        <div className="relative w-full aspect-[3/2] mb-3 rounded-md overflow-hidden">
+        <div className="relative mb-3 aspect-[3/2] w-full overflow-hidden rounded-md">
           <Image
             src={post.thumbnail}
             alt={`${post.title} 썸네일`}
             fill
-            className="object-cover w-full h-full"
+            className="h-full w-full object-cover"
           />
         </div>
 
         <div className="w-full">
           {/* 태그 버튼 목록 */}
           {tags.length > 0 && (
-            <div className="relative h-[32px] sm:h-[40px] md:h-[48px] overflow-hidden">
-              <div className="flex flex-wrap gap-1.5 sm:gap-2 md:gap-2.5 lg:gap-3 absolute top-0 left-0 w-full">
+            <div className="relative h-[32px] overflow-hidden sm:h-[40px] md:h-[48px]">
+              <div className="absolute left-0 top-0 flex w-full flex-wrap gap-2">
                 {tags.map(tag => (
                   <button
                     key={tag}
@@ -53,8 +53,7 @@ export default function HomeArticleCard({ post, category, onTagClick }: HomeArti
                       onTagClick?.(tag); // 선택된 태그 상태 업데이트
                       router.push(`${basePath}?tag=${encodeURIComponent(tag)}`);
                     }}
-                    className="text-[10px] font-bold sm:text-xs md:text-sm lg:text-sm 2xl:text-base text-white
-                    px-2 sm:px-2.5 md:px-3 py-1.5 bg-light-gray rounded-lg hover:bg-dark-gray duration-300"
+                    className="rounded-md bg-light-gray px-2 py-1 text-xs font-bold text-white duration-300 hover:bg-dark-gray md:rounded-lg md:px-3 md:py-2 md:text-sm"
                   >
                     {tag}
                   </button>
@@ -64,13 +63,13 @@ export default function HomeArticleCard({ post, category, onTagClick }: HomeArti
           )}
 
           {/* 텍스트 콘텐츠 */}
-          <h3 className="text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl font-semibold 2xl:font-extrabold truncate line-clamp-1">
+          <h3 className="line-clamp-1 truncate text-sm font-semibold sm:text-base md:text-lg lg:text-xl 2xl:text-2xl 2xl:font-extrabold">
             {post.title}
           </h3>
-          <p className="text-[11px] sm:text-sm md:text-base lg:text-[17px] 2xl:text-lg text-dark-gray truncate mb-1.5 md:mb-2 line-clamp-1">
+          <p className="mb-0 line-clamp-1 truncate text-[11px] text-dark-gray sm:text-sm md:mb-2 md:text-base lg:text-[17px] 2xl:text-lg">
             {post.description}
           </p>
-          <p className="text-[10px] sm:text-xs md:text-sm lg:text-base 2xl:text-lg text-dark-gray truncate">
+          <p className="truncate text-[10px] text-dark-gray sm:text-xs md:text-sm lg:text-base 2xl:text-lg">
             {post.date}
           </p>
         </div>

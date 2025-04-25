@@ -9,7 +9,7 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer
-      className="bg-light-gray px-5 sm:px-10 md:px-20 lg:px-32 xl:px-40 2xl:px-40 py-6 sm:py-12 flex flex-col lg:flex-row items-center lg:items-start gap-5 lg:gap-40 text-dark-gray text-xs lg:text-base"
+      className="flex flex-col items-center gap-5 bg-light-gray px-5 py-6 text-xs text-dark-gray sm:px-10 sm:py-12 md:px-20 lg:flex-row lg:items-start lg:gap-40 lg:px-32 lg:text-base xl:px-40 2xl:px-40"
       aria-label="사이트 푸터"
     >
       {/* 사이트 로고 */}
@@ -18,13 +18,13 @@ export default function Footer() {
         alt="uzu-dev logo"
         width={88}
         height={49}
-        className="opacity-25 lg:w-40 lg:h-24"
+        className="opacity-25 lg:h-24 lg:w-40"
       />
 
       {/* 연락처 및 저작권 정보 */}
       <div>
         <div className="flex items-start">
-          <p className="after:content-['|'] after:mx-2">Made by Yuju</p>
+          <p className="after:mx-2 after:content-['|']">Made by Yuju</p>
           <ul>
             <li>
               Contact:{' '}

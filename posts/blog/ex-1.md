@@ -1,9 +1,9 @@
 ---
 title: '예시'
 description: '예시 페이지입니다.'
-date: '2025-04-01'
-category: ['backend']
-tags: ['Next.js', 'Tailwind', 'Markdown']
+date: '2025-04-17'
+category: ['frontend']
+tags: ['Next.js', 'Tailwind']
 thumbnail: '/images/guide.jpg'
 ---
 

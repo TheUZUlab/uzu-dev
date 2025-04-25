@@ -10,62 +10,40 @@ export default async function Home() {
     <>
       {/* hero 영역 */}
       <section
-        className="py-10 lg:py-24 flex flex-col justify-center items-center text-white"
+        className="flex flex-col items-center justify-center py-10 text-white lg:py-24"
         style={{
           background: 'linear-gradient(to right, #939393, #c3c3c3)',
         }}
       >
-        <p className="lg:text-4xl text-xl font-bold lg:mb-3 mb-0">
+        <p className="mb-0 text-xl font-bold lg:mb-3 lg:text-4xl">
           Hi, I&apos;m <span className="text-white">Jang Yuju</span>
         </p>
-        <p className="text-xs lg:text-md text-light-gray lg:mb-6 mb-3">
+        <p className="lg:text-md mb-3 text-xs text-light-gray lg:mb-6">
           AI Enthusiast · Web Developer · Future Game Creator
         </p>
 
         <Link
-          href="/projects"
-          className="bg-white text-dark-gray text-xs lg:text-base font-semibold px-3 py-1.5 lg:px-6 lg:py-2.5 rounded-full hover:bg-soft-gray transition shadow-md"
+          href="/project"
+          className="rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-dark-gray shadow-md transition hover:bg-soft-gray lg:px-6 lg:py-2.5 lg:text-base"
         >
           Explore My Work
         </Link>
 
-        <p className="mt-1.5 lg:mt-3 text-xs lg:text-sm text-light-gray">
+        <p className="mt-1.5 text-xs text-light-gray lg:mt-3 lg:text-sm">
           Cheju Halla University · Born in 2004
         </p>
       </section>
-      <main className="px-5 mx-auto min-w-[300px] max-w-[1600px] mb-24">
-        {/* 블로그 영역 */}
-        <section className="relative">
-          <div className="relative my-14 lg:my-24 w-full h-1 bg-gradient-custom">
-            <h2 className="absolute left-5 lg:left-24 top-1/2 -translate-y-1/2 bg-white px-4 text-base lg:text-2xl font-extrabold text-black capitalize">
-              blog
-            </h2>
-          </div>
-          <Link
-            href="/blog"
-            className="text-dark-gray hover:text-black hover:underline text-xs lg:text-base absolute right-0 top-0 my-4 lg:my-7 duration-300"
-          >
-            더보기 →
-          </Link>
-          <ul className="flex justify-between">
-            {blogPosts.map(post => (
-              <li key={post.slug} className="w-[32%] min-w-[100px] max-w-[700px]">
-                <HomeArticleCard post={post} category="blog" />
-              </li>
-            ))}
-          </ul>
-        </section>
-
+      <main className="mx-auto mb-24 min-w-[300px] max-w-[1600px] px-5">
         {/* 프로젝트 영역 */}
         <section className="relative">
-          <div className="relative my-14 lg:my-24 w-full h-1 bg-gradient-custom">
-            <h2 className="absolute left-5 lg:left-24 top-1/2 -translate-y-1/2 bg-white px-4 text-base lg:text-2xl font-extrabold text-black capitalize">
+          <div className="relative my-14 h-1 w-full bg-gradient-custom lg:my-24">
+            <h2 className="absolute left-5 top-1/2 -translate-y-1/2 bg-white px-4 text-base font-extrabold capitalize text-black lg:left-24 lg:text-2xl">
               project
             </h2>
           </div>
           <Link
             href="/project"
-            className="text-dark-gray hover:text-black hover:underline text-xs lg:text-base absolute right-0 top-0 my-4 lg:my-7 duration-300"
+            className="absolute right-0 top-0 my-4 text-xs text-dark-gray duration-300 hover:text-black hover:underline lg:my-7 lg:text-base"
           >
             더보기 →
           </Link>
@@ -73,6 +51,28 @@ export default async function Home() {
             {projectPosts.map(post => (
               <li key={post.slug} className="w-[32%] min-w-[100px] max-w-[700px]">
                 <HomeArticleCard post={post} category="project" />
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* 블로그 영역 */}
+        <section className="relative">
+          <div className="relative my-14 h-1 w-full bg-gradient-custom lg:my-24">
+            <h2 className="absolute left-5 top-1/2 -translate-y-1/2 bg-white px-4 text-base font-extrabold capitalize text-black lg:left-24 lg:text-2xl">
+              blog
+            </h2>
+          </div>
+          <Link
+            href="/blog"
+            className="absolute right-0 top-0 my-4 text-xs text-dark-gray duration-300 hover:text-black hover:underline lg:my-7 lg:text-base"
+          >
+            더보기 →
+          </Link>
+          <ul className="flex justify-between">
+            {blogPosts.map(post => (
+              <li key={post.slug} className="w-[32%] min-w-[100px] max-w-[700px]">
+                <HomeArticleCard post={post} category="blog" />
               </li>
             ))}
           </ul>

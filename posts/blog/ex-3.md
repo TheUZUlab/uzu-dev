@@ -1,9 +1,9 @@
 ---
 title: '예시'
 description: '예시 페이지입니다.'
-date: '2025-04-01'
-category: ['game']
-tags: ['Next.js']
+date: '2025-04-19'
+category: ['frontend']
+tags: ['Tailwind', 'Markdown']
 thumbnail: '/images/guide.jpg'
 ---
 

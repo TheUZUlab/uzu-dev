@@ -25,23 +25,23 @@ export default function ArticleCard({ post, category, type, onTagClick }: Articl
     <Link
       href={`${basePath}/${category}/${post.slug}`}
       aria-label={`포스트 보기: ${post.title}`}
-      className="px-5 lg:px-24 flex items-center gap-8 lg:gap-11"
+      className="flex items-center gap-8 px-5 lg:gap-11 lg:px-24"
     >
       {/* 썸네일 이미지 */}
-      <div className="relative rounded-lg w-[32%] min-w-[144px] max-w-[250px] lg:min-w-[250px]  lg:max-w-[500px] aspect-[3/2]">
+      <div className="relative aspect-[3/2] w-[32%] min-w-[144px] max-w-[250px] rounded-lg lg:min-w-[250px] lg:max-w-[500px]">
         <Image
           src={post.thumbnail}
           alt={`${post.title} 썸네일`}
           fill
-          className="object-cover rounded-lg"
+          className="rounded-lg object-cover"
         />
       </div>
 
       <div className="w-full">
         {/* 태그 버튼 목록 - 한 줄만 출력 */}
         {tags.length > 0 && (
-          <div className="relative h-[32px] sm:h-[40px] md:h-[48px] overflow-hidden">
-            <div className="flex flex-wrap gap-2 absolute top-0 left-0 w-full">
+          <div className="relative h-[32px] overflow-hidden sm:h-[40px] md:h-[48px]">
+            <div className="absolute left-0 top-0 flex w-full flex-wrap gap-2">
               {tags.map(tag => (
                 <button
                   key={tag}
@@ -50,7 +50,7 @@ export default function ArticleCard({ post, category, type, onTagClick }: Articl
                     e.preventDefault();
                     onTagClick?.(tag);
                   }}
-                  className="text-xs font-bold lg:text-sm text-white px-2 py-1.5 lg:px-3 bg-light-gray rounded-lg hover:bg-dark-gray duration-300"
+                  className="rounded-md bg-light-gray px-2 py-1 text-xs font-bold text-white duration-300 hover:bg-dark-gray md:rounded-lg md:px-3 md:py-2 md:text-sm"
                 >
                   {tag}
                 </button>
@@ -60,13 +60,13 @@ export default function ArticleCard({ post, category, type, onTagClick }: Articl
         )}
 
         {/* 제목 / 설명 / 날짜 */}
-        <h3 className="text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl font-semibold 2xl:font-extrabold  line-clamp-1">
+        <h3 className="line-clamp-1 text-sm font-semibold sm:text-base md:text-lg lg:text-xl 2xl:text-2xl 2xl:font-extrabold">
           {post.title}
         </h3>
-        <p className="text-[11px] sm:text-sm md:text-base lg:text-[17px] 2xl:text-lg text-dark-gray  mb-1.5 md:mb-2 line-clamp-1">
+        <p className="mb-0 line-clamp-1 text-[11px] text-dark-gray sm:mb-2 sm:text-sm md:mb-3 md:text-base lg:text-[17px] 2xl:text-lg">
           {post.description}
         </p>
-        <p className="text-[10px] sm:text-xs md:text-sm lg:text-base 2xl:text-lg text-dark-gray truncate">
+        <p className="truncate text-[10px] text-dark-gray sm:text-xs md:text-sm lg:text-base 2xl:text-lg">
           {post.date}
         </p>
       </div>
