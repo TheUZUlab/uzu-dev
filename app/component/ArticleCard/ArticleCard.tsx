@@ -25,7 +25,7 @@ export default function ArticleCard({ post, category, type, onTagClick }: Articl
     <Link
       href={`${basePath}/${category}/${post.slug}`}
       aria-label={`포스트 보기: ${post.title}`}
-      className="flex items-center gap-8 px-5 lg:gap-11 lg:px-24"
+      className="flex items-center gap-8 lg:gap-11"
     >
       {/* 썸네일 이미지 */}
       <div className="relative aspect-[3/2] w-[32%] min-w-[144px] max-w-[250px] rounded-lg lg:min-w-[250px] lg:max-w-[500px]">
