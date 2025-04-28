@@ -22,54 +22,56 @@ export default function ArticleCard({ post, category, type, onTagClick }: Articl
   const tags = post.tags ?? [];
 
   return (
-    <Link
-      href={`${basePath}/${category}/${post.slug}`}
-      aria-label={`포스트 보기: ${post.title}`}
-      className="flex items-center gap-8 lg:gap-11"
-    >
-      {/* 썸네일 이미지 */}
-      <div className="relative aspect-[3/2] w-[32%] min-w-[144px] max-w-[250px] rounded-lg lg:min-w-[250px] lg:max-w-[500px]">
-        <Image
-          src={post.thumbnail}
-          alt={`${post.title} 썸네일`}
-          fill
-          className="rounded-lg object-cover"
-        />
-      </div>
+    <article className="ml-5 w-full transition-transform duration-300 hover:left-24 hover:scale-105 lg:ml-24">
+      <Link
+        href={`${basePath}/${category}/${post.slug}`}
+        aria-label={`포스트 보기: ${post.title}`}
+        className="flex items-center gap-8 lg:gap-11"
+      >
+        {/* 썸네일 이미지 */}
+        <div className="relative aspect-[3/2] w-[32%] min-w-[144px] max-w-[250px] rounded-lg lg:min-w-[250px] lg:max-w-[500px]">
+          <Image
+            src={post.thumbnail}
+            alt={`${post.title} 썸네일`}
+            fill
+            className="rounded-lg object-cover"
+          />
+        </div>
 
-      <div className="w-full">
-        {/* 태그 버튼 목록 - 한 줄만 출력 */}
-        {tags.length > 0 && (
-          <div className="relative h-[32px] overflow-hidden md:h-[40px]">
-            <div className="absolute left-0 top-0 flex w-full flex-wrap gap-2">
-              {tags.map(tag => (
-                <button
-                  key={tag}
-                  type="button"
-                  onClick={e => {
-                    e.preventDefault();
-                    onTagClick?.(tag);
-                  }}
-                  className="rounded-md bg-light-gray px-2 py-1 text-xs font-bold text-white duration-300 hover:bg-dark-gray md:rounded-lg md:px-3 md:py-2 md:text-sm"
-                >
-                  {tag}
-                </button>
-              ))}
+        <div className="w-full">
+          {/* 태그 버튼 목록 - 한 줄만 출력 */}
+          {tags.length > 0 && (
+            <div className="relative h-[32px] overflow-hidden md:h-[40px]">
+              <div className="absolute left-0 top-0 flex w-full flex-wrap gap-2">
+                {tags.map(tag => (
+                  <button
+                    key={tag}
+                    type="button"
+                    onClick={e => {
+                      e.preventDefault();
+                      onTagClick?.(tag);
+                    }}
+                    className="rounded-md bg-light-gray px-2 py-1 text-xs font-bold text-white duration-300 hover:bg-dark-gray md:rounded-lg md:px-3 md:py-2 md:text-sm"
+                  >
+                    {tag}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {/* 제목 / 설명 / 날짜 */}
-        <h3 className="line-clamp-1 text-sm font-semibold sm:text-base md:text-lg lg:text-xl 2xl:text-2xl 2xl:font-extrabold">
-          {post.title}
-        </h3>
-        <p className="mb-0 line-clamp-1 text-[11px] text-dark-gray sm:mb-2 sm:text-sm md:mb-3 md:text-base lg:text-[17px] 2xl:text-lg">
-          {post.description}
-        </p>
-        <p className="truncate text-[10px] text-dark-gray sm:text-xs md:text-sm lg:text-base 2xl:text-lg">
-          {post.date}
-        </p>
-      </div>
-    </Link>
+          {/* 제목 / 설명 / 날짜 */}
+          <h3 className="line-clamp-1 text-sm font-semibold sm:text-base md:text-lg lg:text-xl 2xl:text-2xl 2xl:font-extrabold">
+            {post.title}
+          </h3>
+          <p className="mb-0 line-clamp-1 text-[11px] text-dark-gray sm:mb-2 sm:text-sm md:mb-3 md:text-base lg:text-[17px] 2xl:text-lg">
+            {post.description}
+          </p>
+          <p className="truncate text-[10px] text-dark-gray sm:text-xs md:text-sm lg:text-base 2xl:text-lg">
+            {post.date}
+          </p>
+        </div>
+      </Link>
+    </article>
   );
 }

@@ -23,7 +23,7 @@ export default function HomeArticleCard({ post, category, onTagClick }: HomeArti
   const router = useRouter();
 
   return (
-    <article className="w-full">
+    <article className="w-full transition-transform duration-300 hover:scale-105">
       <Link
         href={`${basePath}/${category}/${post.slug}`}
         aria-label={`포스트 보기: ${post.title}`}
