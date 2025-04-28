@@ -70,7 +70,7 @@ export default function PageWithTags({ posts, category, type }: BlogTagFilterPro
       </aside>
 
       {/* 포스트 리스트 */}
-      <ul className="pr-30 space-y-3 lg:space-y-11 xl:pr-60">
+      <ul className="pr-30 space-y-3 lg:space-y-11 xl:pr-72">
         {filtered.map(post => (
           <li key={post.slug}>
             <ArticleCard post={post} category={category} type={type} onTagClick={setSelectedTag} />
