@@ -4,7 +4,7 @@ description: '예시 페이지입니다.'
 date: '2025-04-19'
 category: ['web']
 tags: ['Next.js', 'Tailwind', 'Markdown']
-thumbnail: '/images/guide.jpg'
+thumbnail: '/images/md-guide.jpg'
 ---
 
 ## 마크다운 렌더링 예시

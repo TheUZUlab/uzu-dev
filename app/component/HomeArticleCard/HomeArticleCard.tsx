@@ -42,7 +42,7 @@ export default function HomeArticleCard({ post, category, onTagClick }: HomeArti
         <div className="w-full">
           {/* 태그 버튼 목록 */}
           {tags.length > 0 && (
-            <div className="relative h-[32px] overflow-hidden md:h-[40px]">
+            <div className="relative h-[32px] overflow-hidden md:h-[40px] 2xl:h-[50px]">
               <div className="absolute left-0 top-0 flex w-full flex-wrap gap-2">
                 {tags.map(tag => (
                   <button

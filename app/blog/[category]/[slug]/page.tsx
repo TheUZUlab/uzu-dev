@@ -55,7 +55,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
             <Link
               key={tag}
               href={`/blog?tag=${encodeURIComponent(tag)}`}
-              className="rounded-lg bg-light-gray px-3 py-1.5 text-sm text-white duration-300 hover:bg-dark-gray"
+              className="rounded-md bg-light-gray px-2 py-1 text-xs font-bold text-white duration-300 hover:bg-dark-gray md:rounded-lg md:px-3 md:py-2 md:text-sm"
             >
               {tag}
             </Link>
@@ -64,12 +64,12 @@ export default async function BlogPostPage({ params }: { params: Params }) {
       )}
 
       {/* 제목 및 날짜 */}
-      <h2 className="mb-1 mt-6 text-2xl font-extrabold text-black lg:text-4xl">{title}</h2>
-      <p className="mb-6 text-sm text-dark-gray lg:text-base">{formattedDate}</p>
+      <h2 className="mb-1 mt-6 text-2xl font-extrabold text-black lg:mb-5 lg:text-5xl">{title}</h2>
+      <p className="mb-6 text-sm text-dark-gray lg:mb-12 lg:text-lg">{formattedDate}</p>
 
       {/* 썸네일 이미지 */}
       {thumbnail && (
-        <div className="relative mb-20 aspect-[3/2] w-full overflow-hidden rounded-md">
+        <div className="relative mb-6 aspect-[3/2] w-full overflow-hidden rounded-md lg:mb-16">
           <Image
             src={thumbnail}
             alt={`${title} 썸네일`}

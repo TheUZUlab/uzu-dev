@@ -41,7 +41,7 @@ export default function ArticleCard({ post, category, type, onTagClick }: Articl
         <div className="w-full">
           {/* 태그 버튼 목록 - 한 줄만 출력 */}
           {tags.length > 0 && (
-            <div className="relative h-[32px] overflow-hidden md:h-[40px]">
+            <div className="relative h-[32px] overflow-hidden md:h-[40px] 2xl:h-[55px]">
               <div className="absolute left-0 top-0 flex w-full flex-wrap gap-2">
                 {tags.map(tag => (
                   <button
