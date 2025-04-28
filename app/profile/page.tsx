@@ -18,8 +18,8 @@ export default function About() {
       {/* 프로필 상단 섹션 */}
       <section className="mb-10 flex flex-col items-center justify-between gap-10 border-b px-0 pb-10 lg:flex-row lg:px-24">
         <div className="w-full text-black lg:w-2/3">
-          <p className="mb-1 text-2xl font-bold">Frontend Developer & AI Learner</p>
-          <p className="mb-4 text-xl font-semibold text-dark-gray">
+          <p className="mb-1 text-lg font-bold lg:text-2xl">Frontend Developer & AI Learner</p>
+          <p className="mb-4 text-base font-semibold text-dark-gray lg:text-xl">
             Artificial Intelligence Student
           </p>
           <div className="space-y-2 text-sm leading-relaxed lg:text-base">
@@ -62,11 +62,11 @@ export default function About() {
         ))}
       </nav>
       {/* 탭 콘텐츠 */}
-      <section className="space-y-6 text-sm text-zinc-800 lg:text-lg">
+      <section className="space-y-6 px-0 text-sm text-zinc-800 lg:px-24 lg:text-lg">
         {tab === 'RESUME' && (
           <ul className="list-inside list-disc space-y-4">
             <li>
-              <strong>2025 – Present:</strong> Cheju Halla University, Department of Artificial
+              <strong>2025 – Present :</strong> Cheju Halla University, Department of Artificial
               Intelligence
             </li>
           </ul>
@@ -75,10 +75,10 @@ export default function About() {
         {tab === 'PROJECT' && (
           <ul className="list-inside list-disc space-y-4">
             <li>
-              <strong>2025.04 - 05:</strong> uzu-dev (Personal portfolio website)
+              <strong>2025.04 - 05 :</strong> uzu-dev (Personal portfolio website)
             </li>
             <li>
-              <strong>추후:</strong> website
+              <strong>추후 :</strong> website
             </li>
           </ul>
         )}
@@ -109,14 +109,14 @@ export default function About() {
         {tab === 'CONTACT' && (
           <div className="space-y-2">
             <p>
-              📧 Email:{' '}
-              <Link href="mailto:ujoo2802@gmail.com" className="underline hover:text-black">
+              <span className="font-semibold">Email : </span>
+              <Link href="mailto:ujoo2802@gmail.com" className="text-dark-gray hover:text-black">
                 ujoo2802@gmail.com
               </Link>
             </p>
             <p>
-              🐱 GitHub:{' '}
-              <Link href="https://github.com/UZU2802" className="underline hover:text-black">
+              <span className="font-semibold">GitHub : </span>
+              <Link href="https://github.com/UZU2802" className="text-dark-gray hover:text-black">
                 github.com/UZU2802
               </Link>
             </p>
