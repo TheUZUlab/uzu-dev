@@ -22,7 +22,7 @@ export default function ArticleCard({ post, category, type, onTagClick }: Articl
   const tags = post.tags ?? [];
 
   return (
-    <article className="ml-5 w-full transition-transform duration-300 hover:left-24 hover:scale-105 lg:ml-24">
+    <article className="w-full transition-transform duration-300 hover:scale-105">
       <Link
         href={`${basePath}/${category}/${post.slug}`}
         aria-label={`포스트 보기: ${post.title}`}
