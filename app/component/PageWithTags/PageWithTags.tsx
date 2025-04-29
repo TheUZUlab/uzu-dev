@@ -39,7 +39,7 @@ export default function PageWithTags({ posts, category, type }: BlogTagFilterPro
     <section>
       {/* 태그 필터 UI */}
       <aside className="sticky top-10 float-right hidden w-48 rounded-xl bg-white p-5 shadow-custom-soft lg:block">
-        <h4 className="mb-8 text-lg font-semibold">contents</h4>
+        <h4 className="mb-5 text-lg font-semibold">contents</h4>
         <ul className="space-y-2" id="post-list">
           <li>
             <button
