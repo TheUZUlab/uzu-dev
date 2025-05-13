@@ -28,19 +28,19 @@ export default function Footer() {
           <ul>
             <li>
               Contact:{' '}
-              <Link href="mailto:ujoo2802@gmail.com" className="hover:underline">
-                ujoo2802@gmail.com
+              <Link href="mailto:uzulab.studio@gmail.com" className="hover:underline">
+                uzulab.studio@gmail.com
               </Link>
             </li>
             <li>
               GitHub:{' '}
               <Link
-                href="https://github.com/UZU2802"
+                href="https://github.com/theUZUlab"
                 className="hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                github.com/UZU2802
+                github.com/theUZUlab
               </Link>
             </li>
           </ul>

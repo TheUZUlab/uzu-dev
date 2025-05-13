@@ -1,9 +1,9 @@
 ---
 title: '정보보안개론 3주차'
-description: '제주한라대학교 정보보안개론 3주차 복습 내용'
+description: '제주한라대학교 1학년 정보보안개론 3주차 수업 정리: 시스템 보안, 취약점 분석, 서버 및 패스워드 보안 포함'
 date: '2025-03-25'
 category: ['university']
-tags: ['first grade', 'info security']
+tags: ['1학년', '정보보안개론']
 thumbnail: '/images/md-info-security.png'
 ---
 

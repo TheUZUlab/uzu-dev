@@ -1,9 +1,9 @@
 ---
 title: '정보보안개론 2주차'
-description: '제주한라대학교 정보보안개론 2주차 복습 내용'
+description: '제주한라대학교 1학년 정보보안개론 2주차 수업 정리: 보안 사고 사례, 사이버 전쟁, 사회공학, 해커 유형 포함'
 date: '2025-03-18'
 category: ['university']
-tags: ['first grade', 'info security']
+tags: ['1학년', '정보보안개론']
 thumbnail: '/images/md-info-security.png'
 ---
 

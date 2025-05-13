@@ -1,9 +1,9 @@
 ---
 title: '정보보안개론 1주차'
-description: '제주한라대학교 정보보안개론 1주차 복습 내용'
+description: '제주한라대학교 1학년 정보보안개론 1주차 수업 정리: 해킹 사례, 정보보호 개념, 보안 윤리 및 AI 시대 이슈 포함'
 date: '2025-03-11'
 category: ['university']
-tags: ['first grade', 'info security']
+tags: ['1학년', '정보보안개론']
 thumbnail: '/images/md-info-security.png'
 ---
 

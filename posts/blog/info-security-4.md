@@ -1,9 +1,9 @@
 ---
 title: '정보보안개론 4주차'
-description: '제주한라대학교 정보보안개론 4주차 복습 내용'
+description: '제주한라대학교 1학년 정보보안개론 4주차 수업 정리: 네트워크 보안, 라우터와 스위치, OSI 7계층 및 TCP/IP 포함'
 date: '2025-04-01'
 category: ['university']
-tags: ['first grade', 'info security']
+tags: ['1학년', '정보보안개론']
 thumbnail: '/images/md-info-security.png'
 ---
 

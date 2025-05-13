@@ -110,14 +110,17 @@ export default function About() {
           <div className="space-y-2">
             <p>
               <span className="font-semibold">Email : </span>
-              <Link href="mailto:ujoo2802@gmail.com" className="text-dark-gray hover:text-black">
-                ujoo2802@gmail.com
+              <Link
+                href="mailto:uzulab.studio@gmail.com"
+                className="text-dark-gray hover:text-black"
+              >
+                uzulab.studio@gmail.com
               </Link>
             </p>
             <p>
               <span className="font-semibold">GitHub : </span>
-              <Link href="https://github.com/UZU2802" className="text-dark-gray hover:text-black">
-                github.com/UZU2802
+              <Link href="https://github.com/theUZUlab" className="text-dark-gray hover:text-black">
+                github.com/theUZUlab
               </Link>
             </p>
           </div>

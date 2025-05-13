@@ -1,9 +1,9 @@
 ---
 title: '정보보안개론 4주차 실습'
-description: '제주한라대학교 정보보안개론 4주차 실습 내용'
+description: '제주한라대학교 1학년 정보보안개론 4주차 실습 정리: 패킷트레이서 실습을 통한 라우터 설정, Ping 테스트, 비밀번호 보안 포함'
 date: '2025-04-01'
 category: ['university']
-tags: ['first grade', 'info security']
+tags: ['1학년', '정보보안개론']
 thumbnail: '/images/md-info-security.png'
 ---
 
