@@ -4,7 +4,7 @@ description: '제주한라대학교 1학년 정보보안개론 4주차 수업 �
 date: '2025-04-01'
 category: ['university']
 tags: ['1학년', '정보보안개론']
-thumbnail: '/images/md-info-security.png'
+thumbnail: '/images/blog/university/info-security/md-info-security.png'
 ---
 
 ---

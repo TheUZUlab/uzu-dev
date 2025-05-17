@@ -4,7 +4,7 @@ description: '제주한라대학교 1학년 기초 파이썬 코딩 4주차 수�
 date: '2025-03-25'
 category: ['university']
 tags: ['1학년', '기초파이썬코딩']
-thumbnail: '/images/md-basic-python-coding.png'
+thumbnail: '/images/blog/university/basic-python-coding/md-basic-python-coding.png'
 ---
 
 ---
@@ -46,16 +46,16 @@ myList.append(2)
 
 ### 1.3 주요 메서드
 
-| **메서드** | **설명** | **예시** |
-| --- | --- | --- |
-| `.append(value)` | 리스트 맨 뒤에 값 추가 | `fruits.append("kiwi")` |
-| `.insert(index, value)` | 특정 위치에 값 삽입 | `fruits.insert(1, "mango")` |
-| `.remove(value)` | 해당 값을 가진 요소 제거 | `fruits.remove("apple")` |
-| `.pop()` | 마지막 요소를 꺼내고 제거 | `last = fruits.pop()` |
-| `.sort()` | 리스트를 오름차순 정렬 | `fruits.sort()` |
-| `.reverse()` | 리스트를 역순 정렬 | `fruits.reverse()` |
-| `max(list)` | 최댓값 반환 | `max(scoreList)` |
-| `min(list)` | 최솟값 반환 | `min(scoreList)` |
+| **메서드**              | **설명**                  | **예시**                    |
+| ----------------------- | ------------------------- | --------------------------- |
+| `.append(value)`        | 리스트 맨 뒤에 값 추가    | `fruits.append("kiwi")`     |
+| `.insert(index, value)` | 특정 위치에 값 삽입       | `fruits.insert(1, "mango")` |
+| `.remove(value)`        | 해당 값을 가진 요소 제거  | `fruits.remove("apple")`    |
+| `.pop()`                | 마지막 요소를 꺼내고 제거 | `last = fruits.pop()`       |
+| `.sort()`               | 리스트를 오름차순 정렬    | `fruits.sort()`             |
+| `.reverse()`            | 리스트를 역순 정렬        | `fruits.reverse()`          |
+| `max(list)`             | 최댓값 반환               | `max(scoreList)`            |
+| `min(list)`             | 최솟값 반환               | `min(scoreList)`            |
 
 > 리스트는 순서를 유지하며, 가변적인 자료형입니다.
 > 실습에서는 `append`, `insert`, `reverse`, `max`, `min` 등의 메서드가 다양하게 사용되었습니다.
@@ -97,17 +97,17 @@ if x > 0:
 
 ### 2.3 조건 연산자
 
-| **연산자** | **의미** | **예시** |
-| --- | --- | --- |
-| `==` | 같다 | `x == 5` |
-| `!=` | 다르다 | `x != 3` |
-| `>` | 크다 | `x > 10` |
-| `<` | 작다 | `x < 10` |
-| `>=` | 크거나 같다 | `x >= 10` |
-| `<=` | 작거나 같다 | `x <= 5` |
-| `and` | 그리고 | `x > 5 and x < 10` |
-| `or` | 또는 | `x < 5 or x > 10` |
-| `not` | 부정 (반대) | `not x == 5` |
+| **연산자** | **의미**    | **예시**           |
+| ---------- | ----------- | ------------------ |
+| `==`       | 같다        | `x == 5`           |
+| `!=`       | 다르다      | `x != 3`           |
+| `>`        | 크다        | `x > 10`           |
+| `<`        | 작다        | `x < 10`           |
+| `>=`       | 크거나 같다 | `x >= 10`          |
+| `<=`       | 작거나 같다 | `x <= 5`           |
+| `and`      | 그리고      | `x > 5 and x < 10` |
+| `or`       | 또는        | `x < 5 or x > 10`  |
+| `not`      | 부정 (반대) | `not x == 5`       |
 
 > 실습에서는 and와 or을 이용한 논리 조건도 다수 사용되었으며, 부정 연산자인 not도 조건 판단에 유용합니다.
 

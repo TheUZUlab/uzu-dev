@@ -4,7 +4,7 @@ description: '제주한라대학교 1학년 기초 파이썬 코딩 1주차 수�
 date: '2025-03-04'
 category: ['university']
 tags: ['1학년', '기초파이썬코딩']
-thumbnail: '/images/md-basic-python-coding.png'
+thumbnail: '/images/blog/university/basic-python-coding/md-basic-python-coding.png'
 ---
 
 ---

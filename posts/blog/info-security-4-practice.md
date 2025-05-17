@@ -4,7 +4,7 @@ description: '제주한라대학교 1학년 정보보안개론 4주차 실습 �
 date: '2025-04-01'
 category: ['university']
 tags: ['1학년', '정보보안개론']
-thumbnail: '/images/md-info-security.png'
+thumbnail: '/images/blog/university/info-security/md-info-security.png'
 ---
 
 ---
@@ -21,7 +21,7 @@ thumbnail: '/images/md-info-security.png'
 
 ### 1-2. 인터페이스 설정
 
-![Frame 1 (3).png](/images/md-info-security-1.png)
+![Frame 1 (3).png](/images/blog/university/info-security/md-info-security-1.png)
 
 #### 1-2-1. `Router>en`
 
@@ -89,7 +89,7 @@ thumbnail: '/images/md-info-security.png'
 
 ### 1-3. Ping 사용
 
-![image.png](/images/md-info-security-2.png)
+![image.png](/images/blog/university/info-security/md-info-security-2.png)
 
 #### 1-3-1. `ping 10.1.1.1`
 
@@ -125,7 +125,7 @@ Success rate is 80 percent (4/5), round-trip min/avg/max = 0/0/0 ms
 
 ### 1-4. 라우터의 인터페이스 구성
 
-![image.png](/images/md-info-security-3.png)
+![image.png](/images/blog/university/info-security/md-info-security-3.png)
 
 #### 1-4-1. 전체 출력 구성 설명
 
@@ -162,7 +162,7 @@ Success rate is 80 percent (4/5), round-trip min/avg/max = 0/0/0 ms
 
 ### 1-5. 비밀번호 설정
 
-![image.png](/images/md-info-security-4.png)
+![image.png](/images/blog/university/info-security/md-info-security-4.png)
 
 #### 1-5-1. `enable password cisco`
 
@@ -186,8 +186,8 @@ Success rate is 80 percent (4/5), round-trip min/avg/max = 0/0/0 ms
 
 ### 1-6. 원격 접속 비밀번호 설정
 
-![image.png](/images/md-info-security-5.png)
-![image.png](/images/md-info-security-6.png)
+![image.png](/images/blog/university/info-security/md-info-security-5.png)
+![image.png](/images/blog/university/info-security/md-info-security-6.png)
 
 #### 1-6-1. `enable`
 
@@ -239,8 +239,8 @@ Success rate is 80 percent (4/5), round-trip min/avg/max = 0/0/0 ms
 
 ### 1-7. 직접 접속 시 비밀번호 설정
 
-![image.png](/images/md-info-security-7.png)
-![image.png](/images/md-info-security-8.png)
+![image.png](/images/blog/university/info-security/md-info-security-7.png)
+![image.png](/images/blog/university/info-security/md-info-security-8.png)
 
 #### 1-7-1. `conf t`
 
