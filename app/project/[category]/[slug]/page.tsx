@@ -39,7 +39,7 @@ export default async function ProjectPostPage({ params }: { params: Params }) {
   const post = await getPostContent('project', slug);
   if (!post) return notFound();
 
-  const { title, date, thumbnail, tags } = post.frontMatter;
+  const { title, date, description, thumbnail, tags } = post.frontMatter;
   const formattedDate = new Date(date).toLocaleDateString('ko-KR', {
     year: 'numeric',
     month: 'long',
@@ -65,6 +65,7 @@ export default async function ProjectPostPage({ params }: { params: Params }) {
 
       {/* 제목 및 날짜 */}
       <h2 className="mb-1 mt-6 text-2xl font-extrabold text-black lg:mb-5 lg:text-5xl">{title}</h2>
+      <p className="mb-5 text-sm text-dark-gray lg:mb-5 lg:text-lg">{description}</p>
       <p className="mb-6 text-sm text-dark-gray lg:mb-12 lg:text-lg">{formattedDate}</p>
 
       {/* 썸네일 이미지 */}

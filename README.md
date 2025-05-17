@@ -60,8 +60,8 @@ uzu-dev/
 **장유주 (Yuju Jang)**  
 인공지능공학과 재학 / 풀스택 개발자 지망  
 📍 Cheju Halla University
-📫 ujoo2802@gmail.com  
-🌐 [포트폴리오](https://uzu.dev) (준비 중)
+📫 uzulab.studio@gmail.com  
+🌐 [포트폴리오](https://www.uzu-dev.kr)
 
 <br/>
 
